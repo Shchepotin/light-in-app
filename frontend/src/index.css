@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.days-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.day-title {
+  text-align: center;
+}
+
+.days-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 24px 24px;
+}
+
+.schedule-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 8px;
+  width: 280px;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.schedule-title {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.schedule-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #f1f1f1f1;
+  border-radius: 3px;
+  padding: 4px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.schedule-row.past .schedule-row-info {
+  color: #7a7878;
+}
+
+.schedule-row.in-on.active {
+  background: #daffe4;
+}
+
+.schedule-row.in-off.active {
+  background: #ffdada;
+}
+
+.schedule-row-icon {
+  display: flex;
+  padding-right: 4px;
+}
+
+.schedule-row.in-on .schedule-row-icon svg {
+  stroke: #a2a100;
+  fill: #a2a100;
+}
+
+.schedule-row.in-off .schedule-row-icon svg path {
+  stroke: #a2003b;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .schedule-row.active::after {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background: #32ba56;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+  }
+}
