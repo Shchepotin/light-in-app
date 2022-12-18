@@ -24,7 +24,9 @@ serviceWorkerRegistration.register({
 
     try {
       console.log("Start clear cache...");
+      console.log("caches.keys...");
       const names = await window.caches.keys();
+      console.log("caches.delete...");
       for (let name of names) await window.caches.delete(name);
       console.log("Finish clear cache");
       window.location.reload();
