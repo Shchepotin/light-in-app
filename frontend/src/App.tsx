@@ -214,7 +214,7 @@ function App() {
           <a target="_blank" rel="noreferrer" href="https://t.me/LightInApp">
             Telegram
           </a>{" "}
-          канал
+          канал додатку
         </p>
         <p>
           <a
