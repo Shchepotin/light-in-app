@@ -111,3 +111,11 @@ code {
     border-radius: 50%;
   }
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 16px;
+}

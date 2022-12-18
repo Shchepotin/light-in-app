@@ -209,6 +209,23 @@ function App() {
           />
         </div>
       </div>
+      <footer className="footer">
+        <p>
+          <a target="_blank" rel="noreferrer" href="https://t.me/LightInApp">
+            Telegram
+          </a>{" "}
+          канал додатку
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/Shchepotin/light-in-app"
+          >
+            GitHub
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

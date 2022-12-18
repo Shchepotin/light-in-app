@@ -72,11 +72,6 @@
               "start": "18:00",
               "end": "20:00",
               "isOn": false
-            },
-            {
-              "start": "20:00",
-              "end": "24:00",
-              "isOn": false
             }
           ]
         }
@@ -148,11 +143,6 @@
             {
               "start": "16:00",
               "end": "18:00",
-              "isOn": false
-            },
-            {
-              "start": "22:00",
-              "end": "24:00",
               "isOn": false
             },
             {
