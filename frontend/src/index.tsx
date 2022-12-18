@@ -23,7 +23,11 @@ serviceWorkerRegistration.register({
     waiting?.postMessage?.({ type: "SKIP_WAITING" });
 
     try {
+      console.log("Start clear cache...");
       await update();
+      const names = await window.caches.keys();
+      for (let name of names) await window.caches.delete(name);
+      console.log("Finish clear cache");
       window.location.reload();
     } catch {}
   },
