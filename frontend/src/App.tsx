@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
+import scheduleDataMinus from "./data-minus.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 
@@ -139,8 +140,12 @@ function Row(props: {
   );
 }
 
-function Schedule(props: { isRunTimers?: boolean; date: number }) {
-  const filteredSchedule = transformData(scheduleData).data.find((item) =>
+function Schedule(props: {
+  isRunTimers?: boolean;
+  date: number;
+  scheduleData: ScheduleDataType;
+}) {
+  const filteredSchedule = transformData(props.scheduleData).data.find((item) =>
     item.date.includes(props.date)
   );
 
@@ -186,7 +191,17 @@ function App() {
       <div className="days-container">
         <div className="days-column">
           <h2 className="day-title">{`Сьогодні, ${new Date().toLocaleDateString()}`}</h2>
-          <Schedule date={new Date().getDate()} isRunTimers />
+          <Schedule
+            date={new Date().getDate()}
+            scheduleData={scheduleData}
+            isRunTimers
+          />
+          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+          <Schedule
+            date={new Date().getDate()}
+            scheduleData={scheduleDataMinus}
+            isRunTimers
+          />
         </div>
         <div className="days-column">
           <h2 className="day-title">
@@ -196,6 +211,12 @@ function App() {
           </h2>
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
+            scheduleData={scheduleData}
+          />
+          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+          <Schedule
+            date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
+            scheduleData={scheduleDataMinus}
           />
         </div>
         <div className="days-column">
@@ -206,6 +227,12 @@ function App() {
           </h2>
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
+            scheduleData={scheduleData}
+          />
+          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+          <Schedule
+            date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
+            scheduleData={scheduleDataMinus}
           />
         </div>
       </div>
