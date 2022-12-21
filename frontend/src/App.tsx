@@ -169,6 +169,7 @@ function Schedule(props: {
 
 function App() {
   const [, setDate] = useState(() => new Date().getDate());
+  const isShowMinus = false;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -196,12 +197,16 @@ function App() {
             scheduleData={scheduleData}
             isRunTimers
           />
-          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-          <Schedule
-            date={new Date().getDate()}
-            scheduleData={scheduleDataMinus}
-            isRunTimers
-          />
+          {isShowMinus && (
+            <>
+              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+              <Schedule
+                date={new Date().getDate()}
+                scheduleData={scheduleDataMinus}
+                isRunTimers
+              />
+            </>
+          )}
         </div>
         <div className="days-column">
           <h2 className="day-title">
@@ -213,11 +218,15 @@ function App() {
             date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
             scheduleData={scheduleData}
           />
-          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-          <Schedule
-            date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
-            scheduleData={scheduleDataMinus}
-          />
+          {isShowMinus && (
+            <>
+              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+              <Schedule
+                date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
+                scheduleData={scheduleDataMinus}
+              />
+            </>
+          )}
         </div>
         <div className="days-column">
           <h2 className="day-title">
@@ -229,11 +238,15 @@ function App() {
             date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
             scheduleData={scheduleData}
           />
-          <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-          <Schedule
-            date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
-            scheduleData={scheduleDataMinus}
-          />
+          {isShowMinus && (
+            <>
+              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
+              <Schedule
+                date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
+                scheduleData={scheduleDataMinus}
+              />
+            </>
+          )}
         </div>
       </div>
       <footer className="footer">
