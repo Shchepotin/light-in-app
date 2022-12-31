@@ -143,6 +143,22 @@ code {
   background-color: #f1f1f1;
 }
 
+.alert-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.alert-content-container {
+  padding: 8px 24px;
+  width: 100%;
+  max-width: 858px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
 .modal-link {
   background-color: transparent;
   border: 0;

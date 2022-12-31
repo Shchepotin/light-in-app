@@ -282,6 +282,7 @@ function Schedule(props: {
 function App() {
   const [, setDate] = useState(() => new Date().getDate());
   const isShowMinus = false;
+  const isShowAlert = true;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -301,6 +302,16 @@ function App() {
           в м. Суми
         </h1>
       </header>
+
+      {isShowAlert && (
+        <div className="alert-container">
+          <div className="alert-content-container">
+            <p>
+              ❗️ Екстренне відключення у зв'язку з загрозою ракетного обстрілу.
+            </p>
+          </div>
+        </div>
+      )}
 
       <CalendarBlock />
 
