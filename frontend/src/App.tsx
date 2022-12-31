@@ -66,6 +66,118 @@ function transformData(data: ScheduleDataType) {
   return result;
 }
 
+function copyToClipboard(text: string) {
+  const el = document.createElement("textarea");
+  el.value = text;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand("copy");
+  document.body.removeChild(el);
+}
+
+function CalendarBlock() {
+  const [isShow, setIsShow] = useState(false);
+  const prefixUrl = window.location.origin;
+
+  return (
+    <div className="calendar-container">
+      <div className="modal-link-container">
+        <button
+          type="button"
+          className="modal-link"
+          onClick={() => setIsShow((prevIsShow) => !prevIsShow)}
+        >
+          Додати в календар
+        </button>
+      </div>
+      {isShow && (
+        <div className="modal-content-container">
+          <p>
+            Знайдіть свою чергу на сайті{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.dtek-kem.com.ua/ua/shutdowns"
+            >
+              ДТЕК
+            </a>{" "}
+            і додайте відповідне посилання у свій календар.
+          </p>
+          <div>
+            {scheduleData.data[0].queue.map((queue, index) => (
+              <div key={index} className="input-block">
+                <label htmlFor="">Черга №{index + 1}</label>
+                <div className="input-sub-block">
+                  <input
+                    className="input-text"
+                    type="input"
+                    readOnly
+                    value={`${prefixUrl}/${index + 1}.ics`}
+                  />
+                  <button
+                    type="button"
+                    onClick={() =>
+                      copyToClipboard(`${prefixUrl}/${index + 1}.ics`)
+                    }
+                  >
+                    Копіювати
+                  </button>
+                  <a
+                    href={`${prefixUrl}/${index + 1}.ics`}
+                    download="calendar.ics"
+                  >
+                    Завантажити
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p>
+            Інструкція для{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://support.google.com/calendar/answer/37118?hl=uk"
+            >
+              Google Calendar
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://support.microsoft.com/uk-ua/office/%D1%96%D0%BC%D0%BF%D0%BE%D1%80%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%96%D0%B2-%D0%B4%D0%BE-outlook-8e8364e1-400e-4c0f-a573-fe76b5a2d379"
+            >
+              Microsoft Outlook
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://support.apple.com/uk-ua/guide/iphone/iph3d1110d4/16.0/ios/16.0"
+            >
+              iOS
+            </a>
+            .
+          </p>
+          <p>
+            У інших програмах шукайте можливість імпортувати календар з{" "}
+            <strong>URL</strong> або <strong>.ics</strong> файлу.
+          </p>
+          <p>
+            Якщо завантажити .ics файл (кнопкою "Заватажити") та імпортувати в
+            календар, то він НЕ буде автоматично оновлюватись, а буде
+            відображати тільки графік на 1 місяць.
+          </p>
+          <p>
+            Якщо після підписки на календар він не з'явився у додатку, то
+            перевірте чи активований він (у боковому меню)
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Row(props: {
   scheduleItem: ScheduleDataType["data"]["0"]["queue"]["0"]["schedule"]["0"];
   isRunTimers?: boolean;
@@ -189,6 +301,9 @@ function App() {
           в м. Суми
         </h1>
       </header>
+
+      <CalendarBlock />
+
       <div className="days-container">
         <div className="days-column">
           <h2 className="day-title">{`Сьогодні, ${new Date().toLocaleDateString()}`}</h2>

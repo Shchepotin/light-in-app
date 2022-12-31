@@ -65,7 +65,7 @@ code {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: #f1f1f1f1;
+  background-color: #f1f1f1;
   border-radius: 3px;
   padding: 4px;
   box-sizing: border-box;
@@ -118,4 +118,58 @@ code {
   flex-direction: column;
   box-sizing: border-box;
   padding: 0 16px;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  align-items: center;
+}
+
+.modal-link-container {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  box-sizing: border-box;
+  padding-bottom: 16px;
+}
+
+.modal-content-container {
+  padding: 8px 24px;
+  width: 100%;
+  max-width: 858px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
+.modal-link {
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline dashed;
+  font-size: 1rem;
+  color: #0000ee;
+}
+
+.modal-link:hover {
+  cursor: pointer;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  gap: 5px;
+}
+
+.input-text {
+  width: 100%;
+  max-width: 200px;
+}
+
+.input-sub-block {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
 }
