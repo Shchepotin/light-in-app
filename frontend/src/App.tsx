@@ -282,7 +282,7 @@ function Schedule(props: {
 function App() {
   const [, setDate] = useState(() => new Date().getDate());
   const isShowMinus = false;
-  const isShowAlert = true;
+  const isShowAlert = false;
 
   useEffect(() => {
     const timer = setInterval(() => {
