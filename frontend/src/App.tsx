@@ -4,6 +4,8 @@ import scheduleData from "./data.json";
 import scheduleDataMinus from "./data-minus.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./firebase/firebase";
 
 type ScheduleDataType = typeof scheduleData;
 
@@ -85,7 +87,14 @@ function CalendarBlock() {
         <button
           type="button"
           className="modal-link"
-          onClick={() => setIsShow((prevIsShow) => !prevIsShow)}
+          onClick={() => {
+            setIsShow((prevIsShow) => !prevIsShow);
+
+            logEvent(analytics, "click", {
+              event_category: "calendar",
+              event_label: "show",
+            });
+          }}
         >
           Додати в календар
         </button>

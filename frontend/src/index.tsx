@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
+import "./firebase/firebase";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
