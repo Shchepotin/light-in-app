@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
-import scheduleDataMinus from "./data-minus.json";
+import AdditionalScheduleData1 from "./data-1.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 import { logEvent } from "firebase/analytics";
@@ -14,6 +14,16 @@ enum StatusEnum {
   Active,
   Past,
 }
+
+enum TabsEnum {
+  Main = 0,
+  Additional1,
+}
+
+type TabsType = {
+  id: TabsEnum;
+  data: ScheduleDataType;
+};
 
 function transformData(data: ScheduleDataType) {
   const result = { data: [...data.data] };
@@ -290,7 +300,10 @@ function Schedule(props: {
 
 function App() {
   const [, setDate] = useState(() => new Date().getDate());
-  const isShowMinus = false;
+  const [tab, setTab] = useState<TabsType>({
+    id: TabsEnum.Main,
+    data: scheduleData,
+  });
   const isShowAlert = false;
 
   useEffect(() => {
@@ -324,24 +337,37 @@ function App() {
 
       <CalendarBlock />
 
+      <div className="tabs-container">
+        <button
+          className={["tab-item", tab.id === TabsEnum.Main && "active"]
+            .filter(Boolean)
+            .join(" ")}
+          onClick={() => {
+            setTab({ id: TabsEnum.Main, data: scheduleData });
+          }}
+        >
+          +4/-2
+        </button>
+        <button
+          className={["tab-item", tab.id === TabsEnum.Additional1 && "active"]
+            .filter(Boolean)
+            .join(" ")}
+          onClick={() => {
+            setTab({ id: TabsEnum.Additional1, data: AdditionalScheduleData1 });
+          }}
+        >
+          +4/-2 та -4/+2
+        </button>
+      </div>
+
       <div className="days-container">
         <div className="days-column">
           <h2 className="day-title">{`Сьогодні, ${new Date().toLocaleDateString()}`}</h2>
           <Schedule
             date={new Date().getDate()}
-            scheduleData={scheduleData}
+            scheduleData={tab.data}
             isRunTimers
           />
-          {isShowMinus && (
-            <>
-              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-              <Schedule
-                date={new Date().getDate()}
-                scheduleData={scheduleDataMinus}
-                isRunTimers
-              />
-            </>
-          )}
         </div>
         <div className="days-column">
           <h2 className="day-title">
@@ -351,17 +377,8 @@ function App() {
           </h2>
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
-            scheduleData={scheduleData}
+            scheduleData={tab.data}
           />
-          {isShowMinus && (
-            <>
-              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-              <Schedule
-                date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
-                scheduleData={scheduleDataMinus}
-              />
-            </>
-          )}
         </div>
         <div className="days-column">
           <h2 className="day-title">
@@ -371,17 +388,8 @@ function App() {
           </h2>
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
-            scheduleData={scheduleData}
+            scheduleData={tab.data}
           />
-          {isShowMinus && (
-            <>
-              <h3 className="day-title">Під час -10&#176;С та нижче</h3>
-              <Schedule
-                date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
-                scheduleData={scheduleDataMinus}
-              />
-            </>
-          )}
         </div>
       </div>
       <footer className="footer">
