@@ -346,7 +346,7 @@ function App() {
             setTab({ id: TabsEnum.Main, data: scheduleData });
           }}
         >
-          +4/-2 та -4/+2
+          +4/-2
         </button>
         <button
           className={["tab-item", tab.id === TabsEnum.Additional1 && "active"]
@@ -356,7 +356,7 @@ function App() {
             setTab({ id: TabsEnum.Additional1, data: AdditionalScheduleData1 });
           }}
         >
-          +4/-2
+          +4/-2 та -4/+2
         </button>
       </div>
 
