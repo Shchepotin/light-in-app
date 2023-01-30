@@ -16,12 +16,12 @@
               "isOn": false
             },
             {
-              "start": "14:00",
+              "start": "12:00",
               "end": "16:00",
               "isOn": false
             },
             {
-              "start": "20:00",
+              "start": "18:00",
               "end": "22:00",
               "isOn": false
             }
@@ -35,17 +35,17 @@
               "isOn": false
             },
             {
-              "start": "10:00",
+              "start": "08:00",
               "end": "12:00",
               "isOn": false
             },
             {
-              "start": "16:00",
+              "start": "14:00",
               "end": "18:00",
               "isOn": false
             },
             {
-              "start": "22:00",
+              "start": "20:00",
               "end": "24:00",
               "isOn": false
             }
@@ -64,13 +64,18 @@
               "isOn": false
             },
             {
-              "start": "12:00",
+              "start": "10:00",
               "end": "14:00",
               "isOn": false
             },
             {
-              "start": "18:00",
+              "start": "16:00",
               "end": "20:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
               "isOn": false
             }
           ]
@@ -93,13 +98,18 @@
               "isOn": false
             },
             {
-              "start": "12:00",
+              "start": "10:00",
               "end": "14:00",
               "isOn": false
             },
             {
-              "start": "18:00",
+              "start": "16:00",
               "end": "20:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
               "isOn": false
             }
           ]
@@ -117,12 +127,12 @@
               "isOn": false
             },
             {
-              "start": "14:00",
+              "start": "12:00",
               "end": "16:00",
               "isOn": false
             },
             {
-              "start": "20:00",
+              "start": "18:00",
               "end": "22:00",
               "isOn": false
             }
@@ -136,17 +146,17 @@
               "isOn": false
             },
             {
-              "start": "10:00",
+              "start": "08:00",
               "end": "12:00",
               "isOn": false
             },
             {
-              "start": "16:00",
+              "start": "14:00",
               "end": "18:00",
               "isOn": false
             },
             {
-              "start": "22:00",
+              "start": "20:00",
               "end": "24:00",
               "isOn": false
             }
@@ -165,17 +175,17 @@
               "isOn": false
             },
             {
-              "start": "10:00",
+              "start": "08:00",
               "end": "12:00",
               "isOn": false
             },
             {
-              "start": "16:00",
+              "start": "14:00",
               "end": "18:00",
               "isOn": false
             },
             {
-              "start": "22:00",
+              "start": "20:00",
               "end": "24:00",
               "isOn": false
             }
@@ -194,13 +204,18 @@
               "isOn": false
             },
             {
-              "start": "12:00",
+              "start": "10:00",
               "end": "14:00",
               "isOn": false
             },
             {
-              "start": "18:00",
+              "start": "16:00",
               "end": "20:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
               "isOn": false
             }
           ]
@@ -218,12 +233,12 @@
               "isOn": false
             },
             {
-              "start": "14:00",
+              "start": "12:00",
               "end": "16:00",
               "isOn": false
             },
             {
-              "start": "20:00",
+              "start": "18:00",
               "end": "22:00",
               "isOn": false
             }
