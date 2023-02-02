@@ -252,8 +252,9 @@ function Row(props: {
       ]
         .filter(Boolean)
         .join(" ")}
+      role="listitem"
     >
-      <div className="schedule-row-icon">
+      <div className="schedule-row-icon" aria-hidden="true">
         {props.scheduleItem.isOn ? <ZapOnIcon /> : <ZapOffIcon />}{" "}
       </div>
       <div className="schedule-row-info">
@@ -283,7 +284,11 @@ function Schedule(props: {
   return (
     <div className="schedule-wrapper">
       {filteredSchedule?.queue.map((queueItem, queueIndex) => (
-        <div className="schedule-container" key={`${props.date}-${queueIndex}`}>
+        <div
+          className="schedule-container"
+          key={`${props.date}-${queueIndex}`}
+          role="list"
+        >
           <h3 className="schedule-title">{`Черга №${queueIndex + 1}`}</h3>
           {queueItem.schedule.map((scheduleItem, scheduleItemIndex) => (
             <Row
@@ -304,7 +309,7 @@ function App() {
     id: TabsEnum.Main,
     data: scheduleData,
   });
-  const isShowAlert = false;
+  const isShowAlert = true;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -329,7 +334,19 @@ function App() {
         <div className="alert-container">
           <div className="alert-content-container">
             <p>
-              ❗️ Екстренне відключення у зв'язку з загрозою ракетного обстрілу.
+              💡 Наразі, <strong>графіки</strong> погодинних відключень по м.
+              Суми та Сумській області <strong>не застосовуються</strong>.
+            </p>
+            <p>
+              Більше інформації в нашому{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://t.me/LightInApp"
+              >
+                Telegram
+              </a>{" "}
+              каналі.
             </p>
           </div>
         </div>
@@ -345,6 +362,7 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Main, data: scheduleData });
           }}
+          aria-label="Графік для плюс 4 мінус 2 та мінус 4 плюс 2"
         >
           +4/-2 та -4/+2
         </button>
@@ -355,6 +373,7 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Additional1, data: AdditionalScheduleData1 });
           }}
+          aria-label="Графік для плюс 4 мінус 2"
         >
           +4/-2
         </button>
