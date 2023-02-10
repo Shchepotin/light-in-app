@@ -309,7 +309,7 @@ function App() {
     id: TabsEnum.Main,
     data: scheduleData,
   });
-  const isShowAlert = true;
+  const isShowAlert = false;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -362,9 +362,9 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Main, data: scheduleData });
           }}
-          aria-label="Графік для плюс 4 мінус 2 та мінус 4 плюс 2"
+          aria-label="Графік для плюс 4 мінус 2"
         >
-          +4/-2 та -4/+2
+          +4/-2
         </button>
         <button
           className={["tab-item", tab.id === TabsEnum.Additional1 && "active"]
@@ -373,9 +373,9 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Additional1, data: AdditionalScheduleData1 });
           }}
-          aria-label="Графік для плюс 4 мінус 2"
+          aria-label="Графік для плюс 4 мінус 2 та мінус 4 плюс 2"
         >
-          +4/-2
+          +4/-2 та -4/+2
         </button>
       </div>
 
