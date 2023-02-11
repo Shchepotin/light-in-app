@@ -309,7 +309,7 @@ function App() {
     id: TabsEnum.Main,
     data: scheduleData,
   });
-  const isShowAlert = false;
+  const isShowAlert = true;
 
   useEffect(() => {
     const timer = setInterval(() => {
