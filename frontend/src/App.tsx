@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
-import AdditionalScheduleData1 from "./data-1.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 import { logEvent } from "firebase/analytics";
@@ -362,20 +361,9 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Main, data: scheduleData });
           }}
-          aria-label="Графік для плюс 4 мінус 2"
+          aria-label="Графік для плюс 10 мінус 2"
         >
-          +4/-2
-        </button>
-        <button
-          className={["tab-item", tab.id === TabsEnum.Additional1 && "active"]
-            .filter(Boolean)
-            .join(" ")}
-          onClick={() => {
-            setTab({ id: TabsEnum.Additional1, data: AdditionalScheduleData1 });
-          }}
-          aria-label="Графік для плюс 4 мінус 2 та мінус 4 плюс 2"
-        >
-          +4/-2 та -4/+2
+          +10/-2
         </button>
       </div>
 
