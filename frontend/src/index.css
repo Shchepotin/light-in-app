@@ -224,6 +224,15 @@ code {
   flex-wrap: wrap;
 }
 
+.select-queues-container .select-queues-items {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .select-queues-container .select-queues-item {
   padding: 12px 16px;
   border: 0 solid transparent;

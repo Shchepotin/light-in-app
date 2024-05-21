@@ -385,30 +385,32 @@ function App() {
       </div>
 
       <div className="select-queues-container">
-        Виберіть чергу:
-        {Array.from({ length: amountOfQueues }, (_, index) => (
-          <button
-            key={index}
-            className={[
-              "select-queues-item",
-              selectedQueues.includes(index) && "active",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            onClick={() => {
-              setSelectedQueues((prevSelectedQueues) => {
-                if (prevSelectedQueues.includes(index)) {
-                  return prevSelectedQueues.filter((item) => item !== index);
-                }
+        <label>Виберіть чергу:</label>
+        <div className="select-queues-items">
+          {Array.from({ length: amountOfQueues }, (_, index) => (
+            <button
+              key={index}
+              className={[
+                "select-queues-item",
+                selectedQueues.includes(index) && "active",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              onClick={() => {
+                setSelectedQueues((prevSelectedQueues) => {
+                  if (prevSelectedQueues.includes(index)) {
+                    return prevSelectedQueues.filter((item) => item !== index);
+                  }
 
-                return [...prevSelectedQueues, index];
-              });
-            }}
-            aria-label={`Номер ${index + 1}`}
-          >
-            №{index + 1}
-          </button>
-        ))}
+                  return [...prevSelectedQueues, index];
+                });
+              }}
+              aria-label={`Номер ${index + 1}`}
+            >
+              №{index + 1}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="days-container">
