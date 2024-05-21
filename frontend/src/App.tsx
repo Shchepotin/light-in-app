@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "./firebase/firebase";
+import useUpdateEffect from "./hooks/useUpdateEffect";
 
 type ScheduleDataType = typeof scheduleData;
 
@@ -275,6 +276,7 @@ function Schedule(props: {
   isRunTimers?: boolean;
   date: number;
   scheduleData: ScheduleDataType;
+  selectedQueues: number[];
 }) {
   const filteredSchedule = transformData(props.scheduleData).data.find((item) =>
     item.date.includes(props.date)
@@ -283,20 +285,21 @@ function Schedule(props: {
   return (
     <div className="schedule-wrapper">
       {filteredSchedule?.queue.map((queueItem, queueIndex) => (
-        <div
-          className="schedule-container"
-          key={`${props.date}-${queueIndex}`}
-          role="list"
-        >
-          <h3 className="schedule-title">{`Черга №${queueIndex + 1}`}</h3>
-          {queueItem.schedule.map((scheduleItem, scheduleItemIndex) => (
-            <Row
-              key={`${props.date}-${scheduleItemIndex}-${queueIndex}-${scheduleItem.start}-${scheduleItem.end}`}
-              scheduleItem={scheduleItem}
-              isRunTimers={props.isRunTimers}
-            />
-          ))}
-        </div>
+        <Fragment key={`${props.date}-${queueIndex}`}>
+          {props.selectedQueues.includes(queueIndex) ||
+          props.selectedQueues.length === 0 ? (
+            <div className="schedule-container" role="list">
+              <h3 className="schedule-title">{`Черга №${queueIndex + 1}`}</h3>
+              {queueItem.schedule.map((scheduleItem, scheduleItemIndex) => (
+                <Row
+                  key={`${props.date}-${scheduleItemIndex}-${queueIndex}-${scheduleItem.start}-${scheduleItem.end}`}
+                  scheduleItem={scheduleItem}
+                  isRunTimers={props.isRunTimers}
+                />
+              ))}
+            </div>
+          ) : null}
+        </Fragment>
       ))}
     </div>
   );
@@ -309,6 +312,20 @@ function App() {
     data: scheduleData,
   });
   const isShowAlert = false;
+  const amountOfQueues = tab.data.data[0].queue.length;
+  const [selectedQueues, setSelectedQueues] = useState<number[]>(() => []);
+
+  useLayoutEffect(() => {
+    const selectedQueues = localStorage.getItem("selectedQueues");
+
+    if (selectedQueues) {
+      setSelectedQueues(JSON.parse(selectedQueues));
+    }
+  }, []);
+
+  useUpdateEffect(() => {
+    localStorage.setItem("selectedQueues", JSON.stringify(selectedQueues));
+  }, [selectedQueues]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -367,12 +384,40 @@ function App() {
         </button>
       </div>
 
+      <div className="select-queues-container">
+        Виберіть чергу:
+        {Array.from({ length: amountOfQueues }, (_, index) => (
+          <button
+            key={index}
+            className={[
+              "select-queues-item",
+              selectedQueues.includes(index) && "active",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            onClick={() => {
+              setSelectedQueues((prevSelectedQueues) => {
+                if (prevSelectedQueues.includes(index)) {
+                  return prevSelectedQueues.filter((item) => item !== index);
+                }
+
+                return [...prevSelectedQueues, index];
+              });
+            }}
+            aria-label={`Номер ${index + 1}`}
+          >
+            №{index + 1}
+          </button>
+        ))}
+      </div>
+
       <div className="days-container">
         <div className="days-column">
           <h2 className="day-title">{`Сьогодні, ${new Date().toLocaleDateString()}`}</h2>
           <Schedule
             date={new Date().getDate()}
             scheduleData={tab.data}
+            selectedQueues={selectedQueues}
             isRunTimers
           />
         </div>
@@ -385,6 +430,7 @@ function App() {
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24).getDate()}
             scheduleData={tab.data}
+            selectedQueues={selectedQueues}
           />
         </div>
         <div className="days-column">
@@ -396,8 +442,25 @@ function App() {
           <Schedule
             date={new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).getDate()}
             scheduleData={tab.data}
+            selectedQueues={selectedQueues}
           />
         </div>
+        {Array.from({ length: 4 }, (_, index) => (
+          <div key={index} className="days-column">
+            <h2 className="day-title">
+              {`${new Date(
+                Date.now() + 1000 * 60 * 60 * 24 * (3 + index)
+              ).toLocaleDateString()}`}
+            </h2>
+            <Schedule
+              date={new Date(
+                Date.now() + 1000 * 60 * 60 * 24 * (3 + index)
+              ).getDate()}
+              scheduleData={tab.data}
+              selectedQueues={selectedQueues}
+            />
+          </div>
+        ))}
       </div>
       <footer className="footer">
         <p>
