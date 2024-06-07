@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "date": [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31],
+      "date": [1, 7, 13, 19, 25, 31],
       "queue": [
         {
           "schedule": [
@@ -11,18 +11,8 @@
               "isOn": false
             },
             {
-              "start": "06:00",
-              "end": "08:00",
-              "isOn": false
-            },
-            {
               "start": "12:00",
               "end": "14:00",
-              "isOn": false
-            },
-            {
-              "start": "18:00",
-              "end": "20:00",
               "isOn": false
             }
           ]
@@ -35,18 +25,8 @@
               "isOn": false
             },
             {
-              "start": "08:00",
-              "end": "10:00",
-              "isOn": false
-            },
-            {
               "start": "14:00",
               "end": "16:00",
-              "isOn": false
-            },
-            {
-              "start": "20:00",
-              "end": "22:00",
               "isOn": false
             }
           ]
@@ -59,18 +39,8 @@
               "isOn": false
             },
             {
-              "start": "10:00",
-              "end": "12:00",
-              "isOn": false
-            },
-            {
               "start": "16:00",
               "end": "18:00",
-              "isOn": false
-            },
-            {
-              "start": "22:00",
-              "end": "24:00",
               "isOn": false
             }
           ]
@@ -78,18 +48,8 @@
         {
           "schedule": [
             {
-              "start": "00:00",
-              "end": "02:00",
-              "isOn": false
-            },
-            {
               "start": "06:00",
               "end": "08:00",
-              "isOn": false
-            },
-            {
-              "start": "12:00",
-              "end": "14:00",
               "isOn": false
             },
             {
@@ -102,18 +62,8 @@
         {
           "schedule": [
             {
-              "start": "02:00",
-              "end": "04:00",
-              "isOn": false
-            },
-            {
               "start": "08:00",
               "end": "10:00",
-              "isOn": false
-            },
-            {
-              "start": "14:00",
-              "end": "16:00",
               "isOn": false
             },
             {
@@ -126,18 +76,8 @@
         {
           "schedule": [
             {
-              "start": "04:00",
-              "end": "06:00",
-              "isOn": false
-            },
-            {
               "start": "10:00",
               "end": "12:00",
-              "isOn": false
-            },
-            {
-              "start": "16:00",
-              "end": "18:00",
               "isOn": false
             },
             {
@@ -150,7 +90,7 @@
       ]
     },
     {
-      "date": [2, 5, 8, 11, 14, 17, 20, 23, 26, 29],
+      "date": [2, 8, 14, 20, 26],
       "queue": [
         {
           "schedule": [
@@ -160,18 +100,8 @@
               "isOn": false
             },
             {
-              "start": "10:00",
-              "end": "12:00",
-              "isOn": false
-            },
-            {
               "start": "16:00",
               "end": "18:00",
-              "isOn": false
-            },
-            {
-              "start": "22:00",
-              "end": "24:00",
               "isOn": false
             }
           ]
@@ -184,18 +114,8 @@
               "isOn": false
             },
             {
-              "start": "06:00",
-              "end": "08:00",
-              "isOn": false
-            },
-            {
               "start": "12:00",
               "end": "14:00",
-              "isOn": false
-            },
-            {
-              "start": "18:00",
-              "end": "20:00",
               "isOn": false
             }
           ]
@@ -208,18 +128,8 @@
               "isOn": false
             },
             {
-              "start": "08:00",
-              "end": "10:00",
-              "isOn": false
-            },
-            {
               "start": "14:00",
               "end": "16:00",
-              "isOn": false
-            },
-            {
-              "start": "20:00",
-              "end": "22:00",
               "isOn": false
             }
           ]
@@ -227,18 +137,8 @@
         {
           "schedule": [
             {
-              "start": "04:00",
-              "end": "06:00",
-              "isOn": false
-            },
-            {
               "start": "10:00",
               "end": "12:00",
-              "isOn": false
-            },
-            {
-              "start": "16:00",
-              "end": "18:00",
               "isOn": false
             },
             {
@@ -251,18 +151,8 @@
         {
           "schedule": [
             {
-              "start": "00:00",
-              "end": "02:00",
-              "isOn": false
-            },
-            {
               "start": "06:00",
               "end": "08:00",
-              "isOn": false
-            },
-            {
-              "start": "12:00",
-              "end": "14:00",
               "isOn": false
             },
             {
@@ -275,18 +165,8 @@
         {
           "schedule": [
             {
-              "start": "02:00",
-              "end": "04:00",
-              "isOn": false
-            },
-            {
               "start": "08:00",
               "end": "10:00",
-              "isOn": false
-            },
-            {
-              "start": "14:00",
-              "end": "16:00",
               "isOn": false
             },
             {
@@ -299,7 +179,7 @@
       ]
     },
     {
-      "date": [3, 6, 9, 12, 15, 18, 21, 24, 27, 30],
+      "date": [3, 9, 15, 21, 27],
       "queue": [
         {
           "schedule": [
@@ -309,18 +189,8 @@
               "isOn": false
             },
             {
-              "start": "08:00",
-              "end": "10:00",
-              "isOn": false
-            },
-            {
               "start": "14:00",
               "end": "16:00",
-              "isOn": false
-            },
-            {
-              "start": "20:00",
-              "end": "22:00",
               "isOn": false
             }
           ]
@@ -333,13 +203,106 @@
               "isOn": false
             },
             {
+              "start": "16:00",
+              "end": "18:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:00",
+              "isOn": false
+            },
+            {
+              "start": "12:00",
+              "end": "14:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "08:00",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
               "start": "10:00",
               "end": "12:00",
               "isOn": false
             },
             {
-              "start": "16:00",
-              "end": "18:00",
+              "start": "22:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:00",
+              "end": "08:00",
+              "isOn": false
+            },
+            {
+              "start": "18:00",
+              "end": "20:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [4, 10, 16, 22, 28],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "06:00",
+              "end": "08:00",
+              "isOn": false
+            },
+            {
+              "start": "18:00",
+              "end": "20:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "08:00",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "10:00",
+              "end": "12:00",
               "isOn": false
             },
             {
@@ -357,13 +320,167 @@
               "isOn": false
             },
             {
+              "start": "12:00",
+              "end": "14:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "02:00",
+              "end": "04:00",
+              "isOn": false
+            },
+            {
+              "start": "14:00",
+              "end": "16:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "04:00",
+              "end": "06:00",
+              "isOn": false
+            },
+            {
+              "start": "16:00",
+              "end": "18:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [5, 11, 17, 23, 29],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "10:00",
+              "end": "12:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
               "start": "06:00",
               "end": "08:00",
               "isOn": false
             },
             {
+              "start": "18:00",
+              "end": "20:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "08:00",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "04:00",
+              "end": "06:00",
+              "isOn": false
+            },
+            {
+              "start": "16:00",
+              "end": "18:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:00",
+              "isOn": false
+            },
+            {
               "start": "12:00",
               "end": "14:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "02:00",
+              "end": "04:00",
+              "isOn": false
+            },
+            {
+              "start": "14:00",
+              "end": "16:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [6, 12, 18, 24, 30],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "08:00",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "10:00",
+              "end": "12:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:00",
+              "end": "08:00",
               "isOn": false
             },
             {
@@ -381,18 +498,8 @@
               "isOn": false
             },
             {
-              "start": "08:00",
-              "end": "10:00",
-              "isOn": false
-            },
-            {
               "start": "14:00",
               "end": "16:00",
-              "isOn": false
-            },
-            {
-              "start": "20:00",
-              "end": "22:00",
               "isOn": false
             }
           ]
@@ -405,18 +512,8 @@
               "isOn": false
             },
             {
-              "start": "10:00",
-              "end": "12:00",
-              "isOn": false
-            },
-            {
               "start": "16:00",
               "end": "18:00",
-              "isOn": false
-            },
-            {
-              "start": "22:00",
-              "end": "24:00",
               "isOn": false
             }
           ]
@@ -429,18 +526,8 @@
               "isOn": false
             },
             {
-              "start": "06:00",
-              "end": "08:00",
-              "isOn": false
-            },
-            {
               "start": "12:00",
               "end": "14:00",
-              "isOn": false
-            },
-            {
-              "start": "18:00",
-              "end": "20:00",
               "isOn": false
             }
           ]
