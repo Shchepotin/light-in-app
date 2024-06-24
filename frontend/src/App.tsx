@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useLayoutEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
+import AdditionalScheduleData0 from "./data-0.json";
 import AdditionalScheduleData1 from "./data-1.json";
 import AdditionalScheduleData2 from "./data-2.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
@@ -19,6 +20,7 @@ enum StatusEnum {
 
 enum TabsEnum {
   Main = 0,
+  Additional0,
   Additional1,
   Additional2,
 }
@@ -285,6 +287,16 @@ function Schedule(props: {
     item.date.includes(props.date)
   );
 
+  if (!filteredSchedule) {
+    return (
+      <div className="schedule-wrapper">
+        <div className="schedule-container" role="list">
+          <h3 className="schedule-title">Графіки на цей день невідомі</h3>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="schedule-wrapper">
       {filteredSchedule?.queue.map((queueItem, queueIndex) => (
@@ -312,7 +324,7 @@ function App() {
   const [, setDate] = useState(() => new Date().getDate());
   const [tab, setTab] = useState<TabsType>({
     id: TabsEnum.Main,
-    data: scheduleData,
+    data: AdditionalScheduleData0,
   });
   const isShowAlert = false;
   const amountOfQueues = tab.data.data[0].queue.length;
@@ -375,13 +387,26 @@ function App() {
 
       <div className="tabs-container">
         <button
+          title="Ребуси"
           className={["tab-item", tab.id === TabsEnum.Main && "active"]
             .filter(Boolean)
             .join(" ")}
           onClick={() => {
-            setTab({ id: TabsEnum.Main, data: scheduleData });
+            setTab({ id: TabsEnum.Main, data: AdditionalScheduleData0 });
           }}
-          aria-label="Графік для мінус 2 плюс 10 "
+          aria-label="Комбінований графік"
+        >
+          Комбінований графік
+        </button>
+
+        <button
+          className={["tab-item", tab.id === TabsEnum.Additional0 && "active"]
+            .filter(Boolean)
+            .join(" ")}
+          onClick={() => {
+            setTab({ id: TabsEnum.Additional0, data: scheduleData });
+          }}
+          aria-label="Графік для мінус 2 плюс 10"
         >
           -2/+10
         </button>
