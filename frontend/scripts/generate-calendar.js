@@ -1,7 +1,7 @@
 const { writeFileSync } = require("fs");
 const ics = require("ics");
 const { fromZonedTime } = require("date-fns-tz");
-const scheduleData = require("../src/data.json");
+const scheduleData = require("../src/data-0.json");
 
 function generateICSCalendar(data, queue) {
   const today = Date.now();
@@ -12,7 +12,7 @@ function generateICSCalendar(data, queue) {
           new Date(today + index * 24 * 60 * 60 * 1000).getDate()
         );
       })
-      .queue[queue - 1].schedule.map((item) => {
+      ?.queue[queue - 1].schedule.map((item) => {
         const currentDate = new Date(today + index * 24 * 60 * 60 * 1000);
         const endTime = item.end === "24:00" ? "23:59" : item.end;
 
@@ -60,7 +60,7 @@ function generateICSCalendar(data, queue) {
       });
   });
 
-  const { value } = ics.createEvents(events.flat(2));
+  const { value } = ics.createEvents(events.filter(Boolean).flat(2));
 
   return value;
 }
