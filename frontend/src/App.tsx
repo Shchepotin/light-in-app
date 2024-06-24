@@ -2,6 +2,7 @@ import { Fragment, useEffect, useLayoutEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
 import AdditionalScheduleData1 from "./data-1.json";
+import AdditionalScheduleData2 from "./data-2.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 import { logEvent } from "firebase/analytics";
@@ -19,6 +20,7 @@ enum StatusEnum {
 enum TabsEnum {
   Main = 0,
   Additional1,
+  Additional2,
 }
 
 type TabsType = {
@@ -393,6 +395,18 @@ function App() {
           aria-label="Графік для мінус 2 плюс 4"
         >
           -2/+4
+        </button>
+
+        <button
+          className={["tab-item", tab.id === TabsEnum.Additional2 && "active"]
+            .filter(Boolean)
+            .join(" ")}
+          onClick={() => {
+            setTab({ id: TabsEnum.Additional2, data: AdditionalScheduleData2 });
+          }}
+          aria-label="Графік для мінус 2 плюс 2 та мінус 4 плюс 4"
+        >
+          -2/+2 та -4/+4
         </button>
       </div>
 
