@@ -429,9 +429,9 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Additional2, data: AdditionalScheduleData2 });
           }}
-          aria-label="Графік для мінус 2 плюс 2 та мінус 4 плюс 4"
+          aria-label="Графік для мінус 4 плюс 2"
         >
-          -2/+2 та -4/+4
+          -4/+2
         </button>
       </div>
 
