@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useLayoutEffect, useState } from "react";
 import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
-import AdditionalScheduleData0 from "./data-0.json";
 import AdditionalScheduleData1 from "./data-1.json";
 import AdditionalScheduleData2 from "./data-2.json";
+import ScheduleDataAllDayOn from "./data-all-day-on.json";
+import scheduleDataPuzzle from "./data-puzzle.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
 import { ReactComponent as ZapOffIcon } from "./images/zap-off.svg";
 import { logEvent } from "firebase/analytics";
@@ -30,6 +31,19 @@ type TabsType = {
   data: ScheduleDataType;
 };
 
+const rangerMap = {
+  "-2/+10": scheduleData,
+  "-2/+4": AdditionalScheduleData1,
+  "-4/+2": AdditionalScheduleData2,
+  "all-day-on": ScheduleDataAllDayOn,
+};
+
+type PuzzleScheduleData = {
+  start: string;
+  end: string;
+  schedule: ScheduleDataType;
+};
+
 function transformData(data: ScheduleDataType) {
   const result = { data: [...data.data] };
 
@@ -41,6 +55,10 @@ function transformData(data: ScheduleDataType) {
           ...queueItem,
           schedule: queueItem.schedule.reduce(
             (accumulator, value, index, allSchedule) => {
+              if (allSchedule.length === 1) {
+                return [value];
+              }
+
               if (index === 0 && value.start !== "00:00") {
                 accumulator = [
                   ...accumulator,
@@ -82,6 +100,112 @@ function transformData(data: ScheduleDataType) {
 
   return result;
 }
+
+function generateScheduleFromPuzzle(
+  date: number,
+  inputData: PuzzleScheduleData[]
+) {
+  const transformedSchedule = inputData.reduce<
+    {
+      start: string;
+      end: string;
+      queue: ScheduleDataType["data"]["0"]["queue"];
+    }[]
+  >((accumulator, item) => {
+    const foundQueue = transformData(item.schedule).data.find((dataItem) =>
+      dataItem.date.includes(date)
+    )?.queue;
+
+    if (foundQueue) {
+      accumulator = [
+        ...accumulator,
+        {
+          start: item.start,
+          end: item.end,
+          queue: foundQueue,
+        },
+      ];
+    }
+
+    return accumulator;
+  }, []);
+
+  const generatedHours = Array.from(
+    { length: 24 },
+    (_, index) => prependZero(index) + ":00"
+  );
+
+  const amountOfQueue = transformedSchedule[0].queue.length;
+
+  const result = Array.from({ length: amountOfQueue }, (_, queueIndex) => {
+    return {
+      schedule: generatedHours
+        .map((hour) => {
+          const foundSchedule = transformedSchedule
+            .find((item) => item.start <= hour && hour < item.end)
+            ?.queue[queueIndex].schedule.find(
+              (scheduleItem) =>
+                scheduleItem.start <= hour && hour < scheduleItem.end
+            );
+
+          return {
+            start: hour,
+            end: prependZero(Number(hour.split(":")[0]) + 1) + ":00",
+            isOn: foundSchedule?.isOn ?? false,
+          };
+        })
+        .reduce((accumulator, value, index, allSchedule) => {
+          if (index === 0) {
+            accumulator = [
+              ...accumulator,
+              {
+                ...value,
+                start: "00:00",
+              },
+            ];
+          } else {
+            const lastValue = accumulator[accumulator.length - 1];
+            if (lastValue.isOn !== value.isOn) {
+              accumulator = [
+                ...accumulator,
+                {
+                  ...value,
+                  start: allSchedule[index - 1].end,
+                },
+              ];
+            } else {
+              accumulator[accumulator.length - 1].end = value.end;
+            }
+          }
+
+          return accumulator;
+        }, [] as ScheduleDataType["data"]["0"]["queue"]["0"]["schedule"]["0"][])
+        .filter((value) => !value.isOn),
+    };
+  });
+
+  return result;
+}
+
+const puzzleSchedule: ScheduleDataType = {
+  data: scheduleDataPuzzle.data.map((item) => {
+    return {
+      date: [item.date],
+      queue: generateScheduleFromPuzzle(
+        item.date,
+        item.ranges.map((range) => {
+          return {
+            start: range.start,
+            end: range.end,
+            schedule: rangerMap[range.schedule as keyof typeof rangerMap],
+          };
+        })
+      ),
+    };
+  }),
+};
+
+console.log("Puzzle Schedule:", JSON.stringify(puzzleSchedule));
 
 function copyToClipboard(text: string) {
   const el = document.createElement("textarea");
@@ -305,6 +429,19 @@ function Schedule(props: {
           props.selectedQueues.length === 0 ? (
             <div className="schedule-container" role="list">
               <h3 className="schedule-title">{`Черга №${queueIndex + 1}`}</h3>
+
+              {queueItem.schedule.length === 0 && (
+                <Row
+                  key={`${props.date}-${queueIndex}`}
+                  scheduleItem={{
+                    start: "00:00",
+                    end: "24:00",
+                    isOn: true,
+                  }}
+                  isRunTimers={props.isRunTimers}
+                />
+              )}
+
               {queueItem.schedule.map((scheduleItem, scheduleItemIndex) => (
                 <Row
                   key={`${props.date}-${scheduleItemIndex}-${queueIndex}-${scheduleItem.start}-${scheduleItem.end}`}
@@ -324,7 +461,7 @@ function App() {
   const [, setDate] = useState(() => new Date().getDate());
   const [tab, setTab] = useState<TabsType>({
     id: TabsEnum.Main,
-    data: AdditionalScheduleData0,
+    data: puzzleSchedule,
   });
   const isShowAlert = false;
   const amountOfQueues = tab.data.data[0].queue.length;
@@ -392,7 +529,7 @@ function App() {
             .filter(Boolean)
             .join(" ")}
           onClick={() => {
-            setTab({ id: TabsEnum.Main, data: AdditionalScheduleData0 });
+            setTab({ id: TabsEnum.Main, data: puzzleSchedule });
           }}
           aria-label="Комбінований графік"
         >
