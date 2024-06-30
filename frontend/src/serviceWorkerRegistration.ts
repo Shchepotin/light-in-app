@@ -66,7 +66,7 @@ function registerValidSW(swUrl: string, config?: Config) {
       setInterval(() => {
         console.log("Check for updates...");
         registration.update();
-      }, 1000 * 60 * 5);
+      }, 1000 * 60);
 
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
@@ -102,6 +102,9 @@ function registerValidSW(swUrl: string, config?: Config) {
           }
         };
       };
+
+      console.log("Check for updates...");
+      registration.update();
     })
     .catch((error) => {
       console.error("Error during service worker registration:", error);
