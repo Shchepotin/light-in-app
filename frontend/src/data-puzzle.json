@@ -34,6 +34,36 @@
           "schedule": "3"
         }
       ]
+    },
+    {
+      "date": 9,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "05:00",
+          "schedule": "3"
+        },
+        {
+          "start": "05:00",
+          "end": "14:00",
+          "schedule": "2"
+        },
+        {
+          "start": "14:00",
+          "end": "16:00",
+          "schedule": "3"
+        },
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "schedule": "4"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "3"
+        }
+      ]
     }
   ]
 }
