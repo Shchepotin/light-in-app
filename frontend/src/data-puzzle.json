@@ -1,122 +1,12 @@
 {
   "data": [
     {
-      "date": 4,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "07:00",
-          "schedule": "-4/+2"
-        },
-        {
-          "start": "07:00",
-          "end": "13:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "13:00",
-          "end": "23:00",
-          "schedule": "-4/+2"
-        },
-        {
-          "start": "23:00",
-          "end": "24:00",
-          "schedule": "-2/+4"
-        }
-      ]
-    },
-    {
-      "date": 5,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "03:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "03:00",
-          "end": "11:00",
-          "schedule": "-4/+2"
-        },
-        {
-          "start": "11:00",
-          "end": "15:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "15:00",
-          "end": "23:00",
-          "schedule": "-4/+2"
-        },
-        {
-          "start": "23:00",
-          "end": "24:00",
-          "schedule": "-2/+4"
-        }
-      ]
-    },
-    {
-      "date": 6,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "10:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "10:00",
-          "end": "16:00",
-          "schedule": "all-day-on"
-        },
-        {
-          "start": "16:00",
-          "end": "20:00",
-          "schedule": "-2/+10"
-        },
-        {
-          "start": "20:00",
-          "end": "22:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "22:00",
-          "end": "24:00",
-          "schedule": "-2/+10"
-        }
-      ]
-    },
-    {
-      "date": 7,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "07:00",
-          "schedule": "-2/+4"
-        },
-        {
-          "start": "07:00",
-          "end": "17:00",
-          "schedule": "all-day-on"
-        },
-        {
-          "start": "17:00",
-          "end": "20:00",
-          "schedule": "-2/+10"
-        },
-        {
-          "start": "20:00",
-          "end": "24:00",
-          "schedule": "-2/+4"
-        }
-      ]
-    },
-    {
       "date": 8,
       "ranges": [
         {
           "start": "00:00",
           "end": "10:00",
-          "schedule": "-2/+4"
+          "schedule": "2"
         },
         {
           "start": "10:00",
@@ -126,22 +16,22 @@
         {
           "start": "14:00",
           "end": "16:00",
-          "schedule": "-2/+10"
+          "schedule": "1"
         },
         {
           "start": "16:00",
           "end": "19:00",
-          "schedule": "-4/+2"
+          "schedule": "3"
         },
         {
           "start": "19:00",
           "end": "22:00",
-          "schedule": "-4/+2"
+          "schedule": "4"
         },
         {
           "start": "22:00",
           "end": "24:00",
-          "schedule": "-4/+2"
+          "schedule": "3"
         }
       ]
     }

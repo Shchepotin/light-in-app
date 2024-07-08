@@ -3,6 +3,7 @@ import prependZero from "./utils/prepend-zero";
 import scheduleData from "./data.json";
 import AdditionalScheduleData1 from "./data-1.json";
 import AdditionalScheduleData2 from "./data-2.json";
+import AdditionalScheduleData3 from "./data-3.json";
 import ScheduleDataAllDayOn from "./data-all-day-on.json";
 import scheduleDataPuzzle from "./data-puzzle.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
@@ -24,6 +25,7 @@ enum TabsEnum {
   Additional0,
   Additional1,
   Additional2,
+  Additional3,
 }
 
 type TabsType = {
@@ -32,9 +34,10 @@ type TabsType = {
 };
 
 const rangerMap = {
-  "-2/+10": scheduleData,
-  "-2/+4": AdditionalScheduleData1,
-  "-4/+2": AdditionalScheduleData2,
+  "1": scheduleData,
+  "2": AdditionalScheduleData1,
+  "3": AdditionalScheduleData2,
+  "4": AdditionalScheduleData3,
   "all-day-on": ScheduleDataAllDayOn,
 };
 
@@ -545,7 +548,7 @@ function App() {
           }}
           aria-label="Графік для мінус 2 плюс 10"
         >
-          -2/+10
+          -2/+10 (1 черга)
         </button>
         <button
           className={["tab-item", tab.id === TabsEnum.Additional1 && "active"]
@@ -556,7 +559,7 @@ function App() {
           }}
           aria-label="Графік для мінус 2 плюс 4"
         >
-          -2/+4
+          -2/+4 (2 черги)
         </button>
 
         <button
@@ -566,9 +569,21 @@ function App() {
           onClick={() => {
             setTab({ id: TabsEnum.Additional2, data: AdditionalScheduleData2 });
           }}
+          aria-label="Графік для мінус 4 плюс 2 та мінус 2 плюс 4"
+        >
+          -4/+2 та -2/+4 (3 черги)
+        </button>
+
+        <button
+          className={["tab-item", tab.id === TabsEnum.Additional3 && "active"]
+            .filter(Boolean)
+            .join(" ")}
+          onClick={() => {
+            setTab({ id: TabsEnum.Additional3, data: AdditionalScheduleData3 });
+          }}
           aria-label="Графік для мінус 4 плюс 2"
         >
-          -4/+2
+          -4/+2 (4 черги)
         </button>
       </div>
 
