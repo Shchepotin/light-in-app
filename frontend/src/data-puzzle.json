@@ -115,8 +115,13 @@
       "ranges": [
         {
           "start": "00:00",
-          "end": "14:00",
+          "end": "10:00",
           "schedule": "-2/+4"
+        },
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "schedule": "all-day-on"
         },
         {
           "start": "14:00",
