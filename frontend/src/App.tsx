@@ -248,9 +248,9 @@ function CalendarBlock() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.dtek-kem.com.ua/ua/shutdowns"
+              href="https://www.soe.com.ua/spozhivacham/vidklyuchennya"
             >
-              ДТЕК
+              Сумиобленерго
             </a>{" "}
             і додайте відповідне посилання у свій календар.
           </p>
