@@ -100,7 +100,7 @@
             { "start": "04:00", "end": "05:00", "isOn": false },
             { "start": "06:00", "end": "08:00", "isOn": false },
             { "start": "12:00", "end": "14:00", "isOn": false },
-            { "start": "16:00", "end": "20:00", "isOn": false }
+            { "start": "18:00", "end": "20:00", "isOn": false }
           ]
         }
       ]
