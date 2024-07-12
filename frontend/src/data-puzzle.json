@@ -64,6 +64,26 @@
           "schedule": "4"
         }
       ]
+    },
+    {
+      "date": 13,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "06:00",
+          "schedule": "3"
+        },
+        {
+          "start": "06:00",
+          "end": "19:00",
+          "schedule": "2"
+        },
+        {
+          "start": "19:00",
+          "end": "24:00",
+          "schedule": "3"
+        }
+      ]
     }
   ]
 }
