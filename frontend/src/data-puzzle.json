@@ -1,86 +1,6 @@
 {
   "data": [
     {
-      "date": 20,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "02:00",
-          "schedule": "1"
-        },
-        {
-          "start": "02:00",
-          "end": "05:00",
-          "schedule": "all-day-on"
-        },
-        {
-          "start": "05:00",
-          "end": "13:00",
-          "schedule": "1"
-        },
-        {
-          "start": "13:00",
-          "end": "24:00",
-          "schedule": "2"
-        }
-      ]
-    },
-    {
-      "date": 21,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "12:00",
-          "schedule": "1"
-        },
-        {
-          "start": "12:00",
-          "end": "15:00",
-          "schedule": "all-day-on"
-        },
-        {
-          "start": "15:00",
-          "end": "16:00",
-          "schedule": "1"
-        },
-        {
-          "start": "16:00",
-          "end": "24:00",
-          "schedule": "2"
-        }
-      ]
-    },
-    {
-      "date": 22,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "01:00",
-          "schedule": "2"
-        },
-        {
-          "start": "01:00",
-          "end": "05:00",
-          "schedule": "1"
-        },
-        {
-          "start": "05:00",
-          "end": "18:00",
-          "schedule": "2"
-        },
-        {
-          "start": "18:00",
-          "end": "23:00",
-          "schedule": "3"
-        },
-        {
-          "start": "23:00",
-          "end": "24:00",
-          "schedule": "2"
-        }
-      ]
-    },
-    {
       "date": 23,
       "ranges": [
         {
@@ -102,6 +22,31 @@
           "start": "16:00",
           "end": "24:00",
           "schedule": "3"
+        }
+      ]
+    },
+    {
+      "date": 24,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "08:00",
+          "schedule": "2"
+        },
+        {
+          "start": "08:00",
+          "end": "20:00",
+          "schedule": "1"
+        },
+        {
+          "start": "20:00",
+          "end": "22:00",
+          "schedule": "2"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "1"
         }
       ]
     }
