@@ -85,11 +85,21 @@
       "ranges": [
         {
           "start": "00:00",
-          "end": "14:00",
+          "end": "12:00",
           "schedule": "2"
         },
         {
+          "start": "12:00",
+          "end": "14:00",
+          "schedule": "1"
+        },
+        {
           "start": "14:00",
+          "end": "16:00",
+          "schedule": "2"
+        },
+        {
+          "start": "16:00",
           "end": "24:00",
           "schedule": "3"
         }
