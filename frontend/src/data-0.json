@@ -76,12 +76,7 @@
             { "start": "18:00", "end": "20:00", "isOn": false }
           ]
         },
-        {
-          "schedule": [
-            { "start": "02:00", "end": "04:00", "isOn": false },
-            { "start": "20:00", "end": "22:00", "isOn": false }
-          ]
-        },
+        { "schedule": [{ "start": "02:00", "end": "04:00", "isOn": false }] },
         {
           "schedule": [
             { "start": "04:00", "end": "06:00", "isOn": false },
