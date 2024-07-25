@@ -65,11 +65,11 @@
       "ranges": [
         {
           "start": "00:00",
-          "end": "16:00",
+          "end": "17:00",
           "schedule": "all-day-on"
         },
         {
-          "start": "16:00",
+          "start": "17:00",
           "end": "22:00",
           "schedule": "1"
         },
