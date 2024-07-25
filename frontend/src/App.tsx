@@ -58,7 +58,11 @@ function transformData(data: ScheduleDataType) {
           ...queueItem,
           schedule: queueItem.schedule.reduce(
             (accumulator, value, index, allSchedule) => {
-              if (allSchedule.length === 1) {
+              if (
+                allSchedule.length === 1 &&
+                value.start === "00:00" &&
+                value.end === "24:00"
+              ) {
                 return [value];
               }
 
