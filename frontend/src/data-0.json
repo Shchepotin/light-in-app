@@ -67,9 +67,20 @@
     {
       "date": [29],
       "queue": [
-        { "schedule": [{ "start": "22:00", "end": "23:00", "isOn": false }] },
-        { "schedule": [{ "start": "18:00", "end": "20:00", "isOn": false }] },
+        { "schedule": [] },
+        { "schedule": [] },
         { "schedule": [{ "start": "20:00", "end": "22:00", "isOn": false }] },
+        { "schedule": [] },
+        { "schedule": [] },
+        { "schedule": [] }
+      ]
+    },
+    {
+      "date": [30],
+      "queue": [
+        { "schedule": [] },
+        { "schedule": [] },
+        { "schedule": [] },
         { "schedule": [] },
         { "schedule": [] },
         { "schedule": [] }
