@@ -29,6 +29,31 @@
           "schedule": "all-day-on"
         }
       ]
+    },
+    {
+      "date": 20,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "16:00",
+          "schedule": "all-day-on"
+        },
+        {
+          "start": "16:00",
+          "end": "17:00",
+          "schedule": "1"
+        },
+        {
+          "start": "17:00",
+          "end": "22:00",
+          "schedule": "2"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "1"
+        }
+      ]
     }
   ]
 }
