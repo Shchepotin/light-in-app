@@ -35,13 +35,8 @@
       "ranges": [
         {
           "start": "00:00",
-          "end": "16:00",
-          "schedule": "all-day-on"
-        },
-        {
-          "start": "16:00",
           "end": "24:00",
-          "schedule": "1"
+          "schedule": "all-day-on"
         }
       ]
     },
