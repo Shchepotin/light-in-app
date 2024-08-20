@@ -54,6 +54,31 @@
           "schedule": "1"
         }
       ]
+    },
+    {
+      "date": 21,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "16:00",
+          "schedule": "all-day-on"
+        },
+        {
+          "start": "16:00",
+          "end": "18:00",
+          "schedule": "1"
+        },
+        {
+          "start": "18:00",
+          "end": "22:00",
+          "schedule": "2"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "1"
+        }
+      ]
     }
   ]
 }
