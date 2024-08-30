@@ -49,7 +49,8 @@
             { "start": "00:00", "end": "02:00", "isOn": false },
             { "start": "06:00", "end": "08:00", "isOn": false },
             { "start": "12:00", "end": "14:00", "isOn": false },
-            { "start": "18:00", "end": "20:00", "isOn": false }
+            { "start": "18:00", "end": "20:00", "isOn": false },
+            { "start": "23:00", "end": "24:00", "isOn": false }
           ]
         }
       ]
@@ -79,6 +80,7 @@
         },
         {
           "schedule": [
+            { "start": "00:00", "end": "02:00", "isOn": false },
             { "start": "06:00", "end": "08:00", "isOn": false },
             { "start": "18:00", "end": "20:00", "isOn": false }
           ]
