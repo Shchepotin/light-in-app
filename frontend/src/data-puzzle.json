@@ -1,81 +1,6 @@
 {
   "data": [
     {
-      "date": 26,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "24:00",
-          "schedule": "4"
-        }
-      ]
-    },
-    {
-      "date": 27,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "06:00",
-          "schedule": "3"
-        },
-        {
-          "start": "06:00",
-          "end": "11:00",
-          "schedule": "4"
-        },
-        {
-          "start": "11:00",
-          "end": "15:00",
-          "schedule": "3"
-        },
-        {
-          "start": "15:00",
-          "end": "21:00",
-          "schedule": "4"
-        },
-        {
-          "start": "21:00",
-          "end": "24:00",
-          "schedule": "3"
-        }
-      ]
-    },
-    {
-      "date": 28,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "11:00",
-          "schedule": "2"
-        },
-        {
-          "start": "11:00",
-          "end": "24:00",
-          "schedule": "3"
-        }
-      ]
-    },
-    {
-      "date": 29,
-      "ranges": [
-        {
-          "start": "00:00",
-          "end": "07:00",
-          "schedule": "2"
-        },
-        {
-          "start": "07:00",
-          "end": "22:00",
-          "schedule": "3"
-        },
-        {
-          "start": "22:00",
-          "end": "24:00",
-          "schedule": "3"
-        }
-      ]
-    },
-    {
       "date": 30,
       "ranges": [
         {
@@ -92,6 +17,26 @@
           "start": "21:00",
           "end": "24:00",
           "schedule": "2"
+        }
+      ]
+    },
+    {
+      "date": 31,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "16:00",
+          "schedule": "1"
+        },
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "schedule": "2"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "1"
         }
       ]
     }
