@@ -52,14 +52,10 @@
     },
     {
       "date": 1,
+
       "ranges": [
         {
           "start": "00:00",
-          "end": "17:00",
-          "schedule": "1"
-        },
-        {
-          "start": "17:00",
           "end": "22:00",
           "schedule": "2"
         },
