@@ -213,7 +213,7 @@
           "schedule": [
             { "start": "04:00", "end": "06:00", "isOn": false },
             { "start": "10:00", "end": "12:00", "isOn": false },
-            { "start": "16:00", "end": "18:00", "isOn": false },
+            { "start": "15:00", "end": "18:00", "isOn": false },
             { "start": "22:00", "end": "24:00", "isOn": false }
           ]
         },
@@ -243,7 +243,7 @@
           "schedule": [
             { "start": "06:00", "end": "08:00", "isOn": false },
             { "start": "12:00", "end": "14:00", "isOn": false },
-            { "start": "18:00", "end": "20:00", "isOn": false }
+            { "start": "16:00", "end": "20:00", "isOn": false }
           ]
         }
       ]
