@@ -159,6 +159,16 @@
           "schedule": "1"
         }
       ]
+    },
+    {
+      "date": 7,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "24:00",
+          "schedule": "all-day-on"
+        }
+      ]
     }
   ]
 }
