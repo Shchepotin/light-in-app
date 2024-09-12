@@ -4,7 +4,7 @@
       "date": [12],
       "queue": [
         { "schedule": [{ "start": "20:00", "end": "22:00", "isOn": false }] },
-        { "schedule": [{ "start": "22:00", "end": "23:00", "isOn": false }] },
+        { "schedule": [{ "start": "22:00", "end": "24:00", "isOn": false }] },
         { "schedule": [{ "start": "18:00", "end": "20:00", "isOn": false }] },
         { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] },
         { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
