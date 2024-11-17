@@ -1,17 +1,22 @@
 {
   "data": [
     {
-      "date": 12,
+      "date": 18,
       "ranges": [
         {
           "start": "00:00",
-          "end": "13:00",
+          "end": "06:00",
           "schedule": "all-day-on"
         },
         {
-          "start": "13:00",
+          "start": "06:00",
+          "end": "22:00",
+          "schedule": "2"
+        },
+        {
+          "start": "22:00",
           "end": "24:00",
-          "schedule": "1"
+          "schedule": "all-day-on"
         }
       ]
     }
