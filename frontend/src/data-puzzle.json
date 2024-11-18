@@ -19,6 +19,46 @@
           "schedule": "all-day-on"
         }
       ]
+    },
+    {
+      "date": 19,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "06:00",
+          "schedule": "all-day-on"
+        },
+        {
+          "start": "06:00",
+          "end": "07:00",
+          "schedule": "1"
+        },
+        {
+          "start": "07:00",
+          "end": "09:00",
+          "schedule": "2"
+        },
+        {
+          "start": "09:00",
+          "end": "14:00",
+          "schedule": "1"
+        },
+        {
+          "start": "14:00",
+          "end": "18:00",
+          "schedule": "2"
+        },
+        {
+          "start": "18:00",
+          "end": "23:00",
+          "schedule": "1"
+        },
+        {
+          "start": "23:00",
+          "end": "24:00",
+          "schedule": "1"
+        }
+      ]
     }
   ]
 }
