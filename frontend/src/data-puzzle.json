@@ -90,8 +90,18 @@
         },
         {
           "start": "14:00",
-          "end": "24:00",
+          "end": "19:00",
           "schedule": "3"
+        },
+        {
+          "start": "19:00",
+          "end": "22:00",
+          "schedule": "1"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "all-day-on"
         }
       ]
     }
