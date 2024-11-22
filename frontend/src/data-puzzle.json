@@ -134,6 +134,26 @@
           "schedule": "all-day-on"
         }
       ]
+    },
+    {
+      "date": 23,
+      "ranges": [
+        {
+          "start": "00:00",
+          "end": "08:00",
+          "schedule": "all-day-on"
+        },
+        {
+          "start": "08:00",
+          "end": "22:00",
+          "schedule": "1"
+        },
+        {
+          "start": "22:00",
+          "end": "24:00",
+          "schedule": "all-day-on"
+        }
+      ]
     }
   ]
 }
