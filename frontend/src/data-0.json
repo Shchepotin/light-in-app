@@ -197,6 +197,17 @@
         { "schedule": [{ "start": "12:00", "end": "14:00", "isOn": false }] },
         { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] }
       ]
+    },
+    {
+      "date": [24],
+      "queue": [
+        { "schedule": [] },
+        { "schedule": [] },
+        { "schedule": [] },
+        { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] },
+        { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
+        { "schedule": [] }
+      ]
     }
   ]
 }
