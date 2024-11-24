@@ -208,6 +208,17 @@
         { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
         { "schedule": [] }
       ]
+    },
+    {
+      "date": [25],
+      "queue": [
+        { "schedule": [] },
+        { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] },
+        { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
+        { "schedule": [{ "start": "18:00", "end": "20:00", "isOn": false }] },
+        { "schedule": [] },
+        { "schedule": [] }
+      ]
     }
   ]
 }
