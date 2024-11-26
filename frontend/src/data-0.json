@@ -224,7 +224,7 @@
       "date": [26],
       "queue": [
         { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
-        { "schedule": [] },
+        { "schedule": [{ "start": "13:00", "end": "14:00", "isOn": false }] },
         { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] },
         { "schedule": [] },
         {

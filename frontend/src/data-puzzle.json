@@ -210,11 +210,11 @@
         },
         {
           "start": "10:00",
-          "end": "14:00",
+          "end": "13:00",
           "schedule": "all-day-on"
         },
         {
-          "start": "14:00",
+          "start": "13:00",
           "end": "21:00",
           "schedule": "1"
         },
