@@ -280,6 +280,17 @@
         { "schedule": [] },
         { "schedule": [] }
       ]
+    },
+    {
+      "date": [9],
+      "queue": [
+        { "schedule": [{ "start": "14:00", "end": "16:00", "isOn": false }] },
+        { "schedule": [{ "start": "16:00", "end": "18:00", "isOn": false }] },
+        { "schedule": [{ "start": "12:00", "end": "14:00", "isOn": false }] },
+        { "schedule": [{ "start": "08:00", "end": "10:00", "isOn": false }] },
+        { "schedule": [{ "start": "10:00", "end": "12:00", "isOn": false }] },
+        { "schedule": [{ "start": "18:00", "end": "19:00", "isOn": false }] }
+      ]
     }
   ]
 }
