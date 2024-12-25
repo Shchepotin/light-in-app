@@ -1,0 +1,747 @@
+{
+  "data": [
+    {
+      "date": [23, 30, 6, 13, 20],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "01:00",
+              "end": "04:30",
+              "isOn": false
+            },
+            {
+              "start": "11:30",
+              "end": "15:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "01:00",
+              "end": "04:30",
+              "isOn": false
+            },
+            {
+              "start": "11:30",
+              "end": "15:00",
+              "isOn": false
+            },
+            {
+              "start": "22:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "04:30",
+              "end": "08:00",
+              "isOn": false
+            },
+            {
+              "start": "15:00",
+              "end": "18:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "04:30",
+              "end": "08:00",
+              "isOn": false
+            },
+            {
+              "start": "15:00",
+              "end": "18:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "01:00",
+              "isOn": false
+            },
+            {
+              "start": "08:00",
+              "end": "11:30",
+              "isOn": false
+            },
+            {
+              "start": "18:30",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "01:00",
+              "isOn": false
+            },
+            {
+              "start": "08:00",
+              "end": "11:30",
+              "isOn": false
+            },
+            {
+              "start": "18:30",
+              "end": "22:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [24, 31, 7, 14, 21],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "01:30",
+              "isOn": false
+            },
+            {
+              "start": "08:30",
+              "end": "12:00",
+              "isOn": false
+            },
+            {
+              "start": "19:00",
+              "end": "22:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "01:30",
+              "isOn": false
+            },
+            {
+              "start": "08:30",
+              "end": "12:00",
+              "isOn": false
+            },
+            {
+              "start": "19:00",
+              "end": "22:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "01:30",
+              "end": "05:00",
+              "isOn": false
+            },
+            {
+              "start": "12:00",
+              "end": "15:30",
+              "isOn": false
+            },
+            {
+              "start": "22:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "01:30",
+              "end": "05:00",
+              "isOn": false
+            },
+            {
+              "start": "12:00",
+              "end": "15:30",
+              "isOn": false
+            },
+            {
+              "start": "22:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "05:00",
+              "end": "08:30",
+              "isOn": false
+            },
+            {
+              "start": "15:30",
+              "end": "19:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "05:00",
+              "end": "08:30",
+              "isOn": false
+            },
+            {
+              "start": "15:30",
+              "end": "19:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [25, 1, 8, 15, 22],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "05:30",
+              "end": "09:00",
+              "isOn": false
+            },
+            {
+              "start": "16:00",
+              "end": "19:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "05:30",
+              "end": "09:00",
+              "isOn": false
+            },
+            {
+              "start": "16:00",
+              "end": "19:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:00",
+              "isOn": false
+            },
+            {
+              "start": "09:00",
+              "end": "12:30",
+              "isOn": false
+            },
+            {
+              "start": "19:30",
+              "end": "23:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:00",
+              "isOn": false
+            },
+            {
+              "start": "09:00",
+              "end": "12:30",
+              "isOn": false
+            },
+            {
+              "start": "19:30",
+              "end": "23:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "02:00",
+              "end": "05:30",
+              "isOn": false
+            },
+            {
+              "start": "12:30",
+              "end": "16:00",
+              "isOn": false
+            },
+            {
+              "start": "23:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "02:00",
+              "end": "05:30",
+              "isOn": false
+            },
+            {
+              "start": "12:30",
+              "end": "16:00",
+              "isOn": false
+            },
+            {
+              "start": "23:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [26, 2, 9, 16],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "02:30",
+              "end": "06:00",
+              "isOn": false
+            },
+            {
+              "start": "13:00",
+              "end": "16:30",
+              "isOn": false
+            },
+            {
+              "start": "23:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "02:30",
+              "end": "06:00",
+              "isOn": false
+            },
+            {
+              "start": "13:00",
+              "end": "16:30",
+              "isOn": false
+            },
+            {
+              "start": "23:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:00",
+              "end": "09:30",
+              "isOn": false
+            },
+            {
+              "start": "16:30",
+              "end": "20:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:00",
+              "end": "09:30",
+              "isOn": false
+            },
+            {
+              "start": "16:30",
+              "end": "20:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:30",
+              "isOn": false
+            },
+            {
+              "start": "09:30",
+              "end": "13:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "23:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "02:30",
+              "isOn": false
+            },
+            {
+              "start": "09:30",
+              "end": "13:00",
+              "isOn": false
+            },
+            {
+              "start": "20:00",
+              "end": "23:30",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [27, 3, 10, 17],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "03:00",
+              "isOn": false
+            },
+            {
+              "start": "10:00",
+              "end": "13:30",
+              "isOn": false
+            },
+            {
+              "start": "20:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "03:00",
+              "isOn": false
+            },
+            {
+              "start": "10:00",
+              "end": "13:30",
+              "isOn": false
+            },
+            {
+              "start": "20:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "03:00",
+              "end": "06:30",
+              "isOn": false
+            },
+            {
+              "start": "13:30",
+              "end": "17:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "03:00",
+              "end": "06:30",
+              "isOn": false
+            },
+            {
+              "start": "13:30",
+              "end": "17:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:30",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "17:00",
+              "end": "20:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "06:30",
+              "end": "10:00",
+              "isOn": false
+            },
+            {
+              "start": "17:00",
+              "end": "20:30",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [28, 4, 11, 18],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "07:00",
+              "end": "10:30",
+              "isOn": false
+            },
+            {
+              "start": "17:30",
+              "end": "21:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "07:00",
+              "end": "10:30",
+              "isOn": false
+            },
+            {
+              "start": "17:30",
+              "end": "21:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "03:30",
+              "isOn": false
+            },
+            {
+              "start": "10:30",
+              "end": "14:00",
+              "isOn": false
+            },
+            {
+              "start": "21:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "03:30",
+              "isOn": false
+            },
+            {
+              "start": "10:30",
+              "end": "14:00",
+              "isOn": false
+            },
+            {
+              "start": "21:00",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "03:30",
+              "end": "07:00",
+              "isOn": false
+            },
+            {
+              "start": "14:00",
+              "end": "17:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "03:30",
+              "end": "07:00",
+              "isOn": false
+            },
+            {
+              "start": "14:00",
+              "end": "17:30",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": [29, 5, 12, 19],
+      "queue": [
+        {
+          "schedule": [
+            {
+              "start": "04:00",
+              "end": "07:30",
+              "isOn": false
+            },
+            {
+              "start": "14:30",
+              "end": "18:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "04:00",
+              "end": "07:30",
+              "isOn": false
+            },
+            {
+              "start": "14:30",
+              "end": "18:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "00:30",
+              "isOn": false
+            },
+            {
+              "start": "07:30",
+              "end": "11:00",
+              "isOn": false
+            },
+            {
+              "start": "18:00",
+              "end": "21:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:00",
+              "end": "00:30",
+              "isOn": false
+            },
+            {
+              "start": "07:30",
+              "end": "11:00",
+              "isOn": false
+            },
+            {
+              "start": "18:00",
+              "end": "21:30",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:30",
+              "end": "04:00",
+              "isOn": false
+            },
+            {
+              "start": "11:00",
+              "end": "14:30",
+              "isOn": false
+            },
+            {
+              "start": "21:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        },
+        {
+          "schedule": [
+            {
+              "start": "00:30",
+              "end": "04:00",
+              "isOn": false
+            },
+            {
+              "start": "11:00",
+              "end": "14:30",
+              "isOn": false
+            },
+            {
+              "start": "21:30",
+              "end": "24:00",
+              "isOn": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

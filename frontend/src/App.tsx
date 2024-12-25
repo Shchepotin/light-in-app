@@ -4,6 +4,7 @@ import scheduleData from "./data.json";
 import AdditionalScheduleData1 from "./data-1.json";
 import AdditionalScheduleData2 from "./data-2.json";
 import AdditionalScheduleData3 from "./data-3.json";
+import AdditionalScheduleData1New from "./data-new-1.json";
 import ScheduleDataAllDayOn from "./data-all-day-on.json";
 import scheduleDataPuzzle from "./data-puzzle.json";
 import { ReactComponent as ZapOnIcon } from "./images/zap-on.svg";
@@ -38,6 +39,7 @@ const rangerMap = {
   "2": AdditionalScheduleData1,
   "3": AdditionalScheduleData2,
   "4": AdditionalScheduleData3,
+  "new-1": AdditionalScheduleData1New,
   "all-day-on": ScheduleDataAllDayOn,
 };
 
@@ -137,10 +139,10 @@ function generateScheduleFromPuzzle(
     return accumulator;
   }, []);
 
-  const generatedHours = Array.from(
-    { length: 24 },
-    (_, index) => prependZero(index) + ":00"
-  );
+  const generatedHours = Array.from({ length: 24 }, (_, index) => [
+    prependZero(index) + ":00",
+    prependZero(index) + ":30",
+  ]).flat();
 
   const amountOfQueue = transformedSchedule[0].queue.length;
 
@@ -155,9 +157,15 @@ function generateScheduleFromPuzzle(
                 scheduleItem.start <= hour && hour < scheduleItem.end
             );
 
+          let end = hour.split(":")[0] + ":30";
+
+          if (hour.split(":")[1] === "30") {
+            end = prependZero(Number(hour.split(":")[0]) + 1) + ":00";
+          }
+
           return {
             start: hour,
-            end: prependZero(Number(hour.split(":")[0]) + 1) + ":00",
+            end,
             isOn: foundSchedule?.isOn ?? false,
           };
         })
@@ -190,6 +198,8 @@ function generateScheduleFromPuzzle(
         .filter((value) => !value.isOn),
     };
   });
+
+  console.log("result", result);
 
   return result;
 }
